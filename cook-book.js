@@ -33,13 +33,15 @@ const handleSubmitButton = e => {
   const author = form.cook.value;
   const difficulty = form.difficulty.value;
   const timing = form.duration.value;
-  const allIngredients = form.querySelectorAll(`[name="ingredient"]`);
-  console.log(allIngredients)
-  let ingr = [];
-    for (const ingredient of allIngredients) {
-      
-    }
+  
 
+  const allIngredients = form.querySelectorAll('.ingredients');
+  let arrayIng;
+  
+  Array.from(allIngredients.forEach(element => {
+    obj[element.attribute('ingredient')] = element.value;
+  }));
+  console.log(element);
   const recipes = [
   {
     title: `${title}`,
@@ -47,7 +49,7 @@ const handleSubmitButton = e => {
     author: `${author}`,
     difficulty: `${difficulty}`,
     timing: `${timing}`,
-    ingredients: [`${ingr}`],
+    ingredients: [`${arrayIng}`],
     steps : [],
 }
 ];
