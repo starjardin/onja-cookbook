@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./cook_book.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="heading-container">
+        <h2 class="heading">Onja cookbook</h2>
+      </div>
+    </header>
+
+    <div class="form_container">
+      <form action="post">
+        <p>
+          <label for="recipe-name">What is the recepe name?</label>
+        </p>
+        <input 
+          type="text" 
+          name="recipe" 
+          id="recipe-name"
+          placeholder="add a recipe">
+        <p><label for="picture">Picture of the result(url)</label></p>
+        <input 
+          type="url" 
+          name="recipeImg" 
+          id="picture"
+          placeholder="add url of your recipe">
+        <p>
+          <label for="cook">Who is the cook</label>
+        </p>
+        <input 
+          type="text" 
+          name="cook" 
+          id="cook"
+          placeholder="cook's name">
+        <p><label for="level">What is the difficulty?</label></p>
+        <select name="difficulty" id="level">
+          <option value="easy">Easy</option>
+          <option value="meduim">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <p>How much time does it take</p>
+        <select name="duration" id="duration">
+          <option value="less-than-15m">Less than 15mn</option>
+          <option value="15mn">15mn</option>
+          <option value="30mn">30mn</option>
+          <option value="45mn">45mn</option>
+          <option value="60mn">60mn</option>
+          <option value="more-than-1h">More than 1h</option>
+        </select>
+        <p>Ingredients</p>
+        <div class="ingredient-list"></div>
+          <button type="button" class="btn add-ingredient">Add new ingredients to the list</button>
+        <p>Steps</p>
+        <div class="step-list"></div>
+          <button type="button" class="btn add-step">Add new step to the list</button>    
+      
+        <p><button type="submit" class="bnt submit">Submit</button></p>
+      </form>
+    </div>
+  </main>
+</body>
+<script src="./cook-book.js"></script>
+</html>
