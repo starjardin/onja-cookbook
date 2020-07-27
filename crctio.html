@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      text-align: center;
+    }
+
+    /* form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } */
+
+    li {
+      list-style: none;
+    }
+
+    label {
+      display: inline-block;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Onja Cookbook</h1>
+    <form action="post">
+      <p><label for="title">What is the recipe name
+          <input type="text" name="title" id="title" placeholder="The name of your recipe">
+        </label></p>
+
+      <p><label for="picture">Picture of the result
+          <input type="text" name="picture" id="picture" placeholder="enter the url of your pic">
+        </label></p>
+
+      <p><label for="author">Who is the chef
+          <input type="text" name="author" id="author">
+        </label></p>
+      <p><label for="difficulty">What is the difficulty
+          <select name="difficulty" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Mediun</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+      </p>
+
+      <p><label for="timing">How time does it take
+          <select name="timimg" id="timing">
+            <option value="<15mn">Less than 15mn</option>
+            <option value="15mn">15mn</option>
+            <option value="30mn">30mn</option>
+            <option value="45mn">45mn</option>
+            <option value="60mn">60mn</option>
+            <option value=">1h">More than an hour</option>
+          </select>
+        </label>
+      </p>
+      <p> <label for="ingredient1">Ingrdients
+          <ul id="ingredientsList">
+
+          </ul>
+          <button type="button" class="addIngredient">Add Ingrdients</button>
+        </label>
+      </p>
+      <p>
+        <label for="step">Steps
+          <ul>
+          </ul>
+          <button type="button">Add Steps</button>
+        </label>
+      </p>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+  <script src="crection.js"></script>
+</body>
+
+</html>
